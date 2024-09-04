@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to my Github</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #2c3e50;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+        }
+
+        .message {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .dancer {
+            position: relative;
+            width: 100px;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        .dancer .body {
+            width: 60px;
+            height: 120px;
+            background: #ff0000;
+            position: absolute;
+            top: 40px;
+            left: 20px;
+        }
+
+        .dancer .head {
+            width: 60px;
+            height: 60px;
+            background: #ffe0bd;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 20px;
+        }
+
+        .dancer .legs {
+            position: absolute;
+            top: 160px;
+            left: 20px;
+            width: 60px;
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .dancer .legs .leg {
+            width: 20px;
+            height: 80px;
+            background: #0000ff;
+            position: absolute;
+        }
+
+        .dancer .legs .leg.left {
+            left: 0;
+            transform-origin: top left;
+            animation: danceLeft 0.5s infinite alternate;
+        }
+
+        .dancer .legs .leg.right {
+            right: 0;
+            transform-origin: top right;
+            animation: danceRight 0.5s infinite alternate;
+        }
+
+        .dancer .shoes {
+            position: absolute;
+            top: 220px;
+            left: 20px;
+            width: 60px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .dancer .shoes .shoe {
+            width: 20px;
+            height: 20px;
+            background: #ffffff;
+            position: absolute;
+        }
+
+        .dancer .shoes .shoe.left {
+            left: 0;
+        }
+
+        .dancer .shoes .shoe.right {
+            right: 0;
+        }
+
+        .disco-ball {
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, #fff 20%, #888 60%, #222 100%);
+            border-radius: 50%;
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes danceLeft {
+            from {
+                transform: rotate(15deg);
+            }
+            to {
+                transform: rotate(-15deg);
+            }
+        }
+
+        @keyframes danceRight {
+            from {
+                transform: rotate(-15deg);
+            }
+            to {
+                transform: rotate(15deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message">Welcome to my Github</div>
+        <div class="dancer">
+            <div class="disco-ball"></div>
+            <div class="head"></div>
+            <div class="body"></div>
+            <div class="legs">
+                <div class="leg left"></div>
+                <div class="leg right"></div>
+            </div>
+            <div class="shoes">
+                <div class="shoe left"></div>
+                <div class="shoe right"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
